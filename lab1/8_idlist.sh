@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d: -f1,3 /etc/passwd | sed "s/:/ /p" | sort -g -k2
+cut -d: -f1,3 /etc/passwd | sed "s/:/ /" | sort -n -k2
