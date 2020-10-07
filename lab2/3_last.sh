@@ -1,2 +1,2 @@
 #!/bin/bash
-ps | tail -1 | awk '{print($0)}'
+ps -o ppid,pid,start,cmd | sed "/ $$ /d" | tail -1

@@ -1,6 +1,7 @@
 #!/bin/bash
 file="$PWD/4.res"
 output="$PWD/5.res"
+rm "$output"
 b=$(cat "$file" | head -1)
 c=0
 #avg=$(echo "$b" | awk '{print($5)}' | awk -F "=" '{print($2)}')
@@ -10,7 +11,6 @@ while read line
 do
  a=$b
  b=$(echo "$line" | awk '{print($3)}')
- echo "$line" > "$output"
  if [ "$a" = "$b" ]
   then
    c=$(("$c" + "1"))
@@ -19,11 +19,12 @@ do
   else
     PPid=$(echo "$a" | awk -F "=" '{print($2)}')
     avg=$(echo "$avg / $c" | bc -l)
-    echo "Average_Sleeping_Children_of_ParentID=$PPid $avg"
+    echo "Average_Sleeping_Children_of_ParentID=$PPid $avg" >> "$output"
     avg=$(echo "$line" | awk '{print($5)}' | awk -F "=" '{print($2)}')
     c="1"
  fi
+ echo "$line" >> "$output"
 done < "$file"
 PPid=$(echo "$b" | awk -F "=" '{print($2)}')
 avg=$(echo "$avg / $c" | bc -l)
-echo "Average_Sleeping_Children_of_ParentID=$PPid $avg"
+echo "Average_Sleeping_Children_of_ParentID=$PPid $avg" >> "$output"
