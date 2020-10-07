@@ -1,2 +1,2 @@
 #!/bin/bash
-ps | awk '{print($1)}' | tail -1
+ps | tail -1 | awk '{print($0)}'
