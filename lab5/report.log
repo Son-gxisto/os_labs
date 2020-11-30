@@ -308,5 +308,28 @@ size:
 30700000
 30800000
 30900000
+31000000
+[  225.311058] mem.bash invoked oom-killer: gfp_mask=0x6280ca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO), nodemask=(null), order=0, oom_score_adj=0
+[  225.311239] mem.bash cpuset=/ mems_allowed=0
+[  225.311339] CPU: 0 PID: 2685 Comm: mem.bash Kdump: loaded Tainted: G                 ---------r-  - 4.18.0-193.28.1.el8_2.x86_64 #1
+[  225.338546] [ 2685]     0  2685   661667   420096  4939776   186140             0 mem.bash
+[  225.339506] Out of memory: Killed process 2685 (mem.bash) total-vm:2646668kB, anon-rss:1679852kB, file-rss:532kB, shmem-rss:0kB, UID:0
+[  308.527569] [ 2820]     0  2820   661139   419318  4931584   186252             0 mem.bash
 [  308.529062] Out of memory: Killed process 2820 (mem.bash) total-vm:2644556kB, anon-rss:1677272kB, file-rss:0kB, shmem-rss:0kB, UID:0
 [  308.600475] oom_reaper: reaped process 2820 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[ 1393.501126] [ 3000]     0  3000   659060   417291  4907008   186185             0 mem.bash
+[ 1393.502319] Out of memory: Killed process 3000 (mem.bash) total-vm:2636240kB, anon-rss:1669164kB, file-rss:0kB, shmem-rss:0kB, UID:0
+[ 1393.563854] oom_reaper: reaped process 3000 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[ 1608.191240] [ 3149]     0  3149   649886   407783  4837376   186503             0 mem.bash
+[ 1608.192416] Out of memory: Killed process 3149 (mem.bash) total-vm:2599544kB, anon-rss:1631120kB, file-rss:12kB, shmem-rss:0kB, UID:0
+[ 1608.254644] oom_reaper: reaped process 3149 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[ 1949.046176] [ 3321]     0  3321   661139   419092  4931584   186478             0 mem.bash
+[ 1949.048153] Out of memory: Killed process 3321 (mem.bash) total-vm:2644556kB, anon-rss:1676368kB, file-rss:0kB, shmem-rss:0kB, UID:0
+[ 1949.120895] oom_reaper: reaped process 3321 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[ 2411.888796] [ 3473]     0  3473   358364   209594  2502656    93209             0 mem.bash
+[ 2411.889025] [ 3474]     0  3474   360344   211669  2523136    93050             0 mem2.bash
+[ 2411.889966] Out of memory: Killed process 3474 (mem2.bash) total-vm:1441376kB, anon-rss:846676kB, file-rss:0kB, shmem-rss:0kB, UID:0
+[ 2411.943237] oom_reaper: reaped process 3474 (mem2.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
+[ 2433.017277] [ 3473]     0  3473   661370   419369  4931584   186429             0 mem.bash
+[ 2433.018307] Out of memory: Killed process 3473 (mem.bash) total-vm:2645480kB, anon-rss:1677476kB, file-rss:0kB, shmem-rss:0kB, UID:0
+[ 2433.086877] oom_reaper: reaped process 3473 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
